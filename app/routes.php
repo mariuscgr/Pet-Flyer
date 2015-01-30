@@ -14,5 +14,9 @@
 Route::get('/', 'HomeController@getIndex');
 Route::get('download', 'HomeController@getDownload');
 
+Route::get('contact', 'ContactController@getIndex');
+Route::get('contactList', 'ContactController@getListing');
+Route::post('contactSave', 'ContactController@contactSave');
+
 Route::post('form',  array('before' => 'csrf','uses'=>'HomeController@postIndex'));
 Route::post('upload', 'HomeController@postUpload');

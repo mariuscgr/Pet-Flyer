@@ -27,6 +27,6 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase {
 		$this->assertTrue($this->client->getResponse()->isOk());
 
 		$this->assertCount(1, $crawler->filter('p:contains("Created by")'));
+		$this->assertResponseStatus(200);
 	}
-
 }
