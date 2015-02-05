@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Missing pet flyer generator</title>
+        <title>T-shirt generator</title>
         <meta name="author" content="Maks Surguy">
         <meta name="description" content="Print out a poster for your lost pet, missing dog or cat template poster">
         <meta name="viewport" content="width=device-width">

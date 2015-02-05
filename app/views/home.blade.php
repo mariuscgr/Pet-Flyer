@@ -281,10 +281,10 @@ jQuery(function(){
 @section('content')
 	<div class="row" style="margin-top:30px;">
 		<div class="span8 offset2">
-			<h1 class="text-center">Missing Pet Poster maker</h1>
+			<h1 class="text-center">T-shirt maker</h1>
 			<div class="well text-center">
-				<p class="lead">This tool will help you print a poster so that you can find your pet quicker</p>
-				<p>Upload a picture of your pet and fill out the information to be placed on the poster</p>
+				<p class="lead">This tool will help you envision yourself the best T-shirt</p>
+				<p>Upload your favorite picture and add the text you like </p>
 			</div>
 		</div>
 	</div>
@@ -304,7 +304,7 @@ jQuery(function(){
 						
 					<p><span class="btn btn-large btn-block fileinput-button">
 					    <i class="icon-picture"></i>
-					    <span>Upload a picture of the pet</span>
+					    <span>Upload your fav picture</span>
 					    <!-- The file input field used as target for the file upload widget -->
 					    <input id="fileupload" accept="image/*" type="file" name="file">
 					</span></p>
@@ -322,26 +322,23 @@ jQuery(function(){
 					<input type="hidden" id="h" name="h" />
 
 					<br>
-				    <p><button type="submit" class="btn btn-large"><i class="icon-eye"></i> Preview and print the poster</button></p>
+				    <p><button type="submit" class="btn btn-large"><i class="icon-eye"></i> Preview and print</button></p>
 				  </fieldset>
 				{{ Form::close();}}
 			</div>
 		</div>
 		<div class="span6">
 			<div class="well">
-				<p class="lead"><i class="icon-attention"></i> Tips on where to place your poster:</p>
+				<p class="lead"><i class="icon-attention"></i> Tips:</p>
 				<ul>
-					<li>High-traffic streets</li>
-					<li>Libraries</li>
-					<li>Coffee Shops</li>
-					<li>Gas Stations</li>
-					<li>Drug Stores</li>
-					<li>Schools</li>
+					<li>Select a great image.</li>
+					<li>Use catchy messages.</li>
+					<li>Print to see how it looks.</li>
 				</ul>
 			</div>
 			<div class="well text-center"  id="imageContainer">
 				<p><img id="previewContainer" src="img/dog-poster.jpg"></p>
-				<p><a href="{{url('download')}}" target="_blank" id="downloadBtn" class="btn btn-block"><i class="icon-download"></i> Download Poster</a></p>
+				<p><a href="{{url('download')}}" target="_blank" id="downloadBtn" class="btn btn-block"><i class="icon-download"></i> Download image</a></p>
 			</div>
 			
 		</div

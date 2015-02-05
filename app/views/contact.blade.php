@@ -142,10 +142,10 @@
 @section('content')
     <div class="row" style="margin-top:30px;">
         <div class="span8 offset2">
-            <h1 class="text-center">Missing Pet Poster maker</h1>
+            <h1 class="text-center">T-shirt maker</h1>
             <div class="well text-center">
-                <p class="lead">This tool will help you print a poster so that you can find your pet quicker</p>
-                <p>Send contact info about your neeeds and desires.</p>
+                <p class="lead">This tool will help you envision yourself the best T-shirt</p>
+                <p>Send contact info about your needs and desires.</p>
             </div>
         </div>
     </div>
