@@ -138,7 +138,6 @@
 
     </style>
 @stop
-
 @section('content')
     <div class="row" style="margin-top:30px;">
         <div class="span8 offset2">

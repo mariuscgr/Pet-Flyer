@@ -6,7 +6,8 @@ class HomeController extends BaseController {
 
 	public function getIndex()
 	{
-		$this->layout->content = View::make('home');
+		$this->layout->content = View::make('home', ['menu_active' => '']);
+		View::share('menu_active', '');
 	}
 
 	// return the poster forcing the download

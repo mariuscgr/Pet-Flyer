@@ -4,13 +4,14 @@ class ContactController extends BaseController{
     protected $layout = 'layouts.layout';
 
     public function getIndex(){
-        $contacts = Contact::all();
-        $this->layout->content = View::make('contact', ['contacts' => $contacts]);
+        $this->layout->content = View::make('contact');
+        View::share('menu_active', 'contact');
     }
 
     public function getListing(){
         $contacts = Contact::all();
         $this->layout->content = View::make('contactList', ['contacts' => $contacts]);
+        View::share('menu_active', 'contactList');
     }
 
     public function contactSave(){

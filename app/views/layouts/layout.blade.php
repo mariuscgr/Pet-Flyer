@@ -36,6 +36,16 @@
         <div id="wrap">
 
         <div class="container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="#"><img class="img-logo" src="/img/icon-plans.png"></a>
+                    <ul class="nav">
+                        <li @if ($menu_active == '') class="active" @endif><a href="{{ url('/')}}">Home</a></li>
+                        <li @if ($menu_active == 'contact') class="active" @endif><a href="{{ url('contact')}}">Contact</a></li>
+                        <li @if ($menu_active == 'contactList') class="active" @endif><a href="{{ url('contactList')}}">Contact List</a></li>
+                    </ul>
+                </div>
+            </div>
             @yield('content')
         </div> <!-- /container -->
 
