@@ -150,13 +150,28 @@
     </div>
     <div class="row">
             <div class="well text-center" id="previewSpinner">
-                {{ Form::open(array('url' => 'contactSave', 'id'=>'lostpetform','method' => 'post'))}}
+                {{ Form::open(array('url' => 'contactSave', 'id'=>'lostpetform','method' => 'post','class' => 'contact-form leftie_contact' ))}}
                 <fieldset>
-                    <legend>Fill out the form below <small>(This information will not be stored)</small></legend>
-                    <p><input type="text" name="name" class="span4" placeholder="Name" value="" autofocus></p>
-                    <p><input type="text" name="email" class="span4" placeholder="Email" value=""></p>
-                    <p><textarea name="data" class="span4" placeholder="Describe issue"></textarea></p>
-                    <p><button type="submit" class="btn btn-large"><i class="icon-eye"></i>Send Info</button></p>
+                    <legend class="text-left">Fill out the form below <small>(This information will not be stored)</small></legend>
+                    <div class="text-left clearfix">
+                        <input type="text" name="name" class="span4" placeholder="Name" value="" autofocus>
+                        @if($errors->has('name'))
+                            {{$errors->first('name', '<div class="inner_error">:message</div>')}}
+                        @endif
+                    </div>
+                    <div class="text-left clearfix">
+                        <input type="text" name="email" class="span4" placeholder="Email" value="">
+                        @if($errors->has('email'))
+                            {{$errors->first('email', '<div>:message</div>')}}
+                        @endif
+                    </div>
+                    <div class="text-left clearfix">
+                        <textarea name="data" class="span4" placeholder="Describe issue"></textarea>
+                        @if($errors->has('data'))
+                            {{$errors->first('data', '<div>:message</div>')}}
+                        @endif
+                    </div>
+                    <div class="text-left  clearfix"><button type="submit" class="btn btn-large"><i class="icon-eye"></i>Send Info</button></div>
                 </fieldset>
                 {{ Form::close();}}
             </div>

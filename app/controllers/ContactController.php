@@ -11,6 +11,7 @@ class ContactController extends BaseController{
     public function getListing(){
         $contacts = Contact::all();
         $this->layout->content = View::make('contactList', ['contacts' => $contacts]);
+
         View::share('menu_active', 'contactList');
     }
 
@@ -20,6 +21,17 @@ class ContactController extends BaseController{
         $contact->Email = Input::get('email');
         $contact->Data = Input::get('data');
         $contact->save();
+
+        $validator = array(
+            'name' => 'required|min:2',
+            'email' => 'required|email',
+            'data' => 'required|min:8'
+        );
+
+        $validator = Validator::make(Input::all(), $validator);
+        if ($validator->fails()) {
+            return Redirect::to('/contact')->withErrors($validator);
+        }
 
         return Redirect::to('/contactList');
     }

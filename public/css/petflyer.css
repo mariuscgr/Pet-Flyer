@@ -97,3 +97,10 @@
 .icon-search:before { content: '\e803'; } /* '' */
 .icon-flashlight:before { content: '\e824'; } /* '' */
 .icon-clock:before { content: '🕔'; } /* '\1f554' */
+
+form.contact-form{
+ width:50%;
+ margin:0 auto;
+}
+
+form.leftie_contact input, form.leftie_contact textarea, div.leftie_contact div.inner_error{float:left;}
